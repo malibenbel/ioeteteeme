@@ -1,17 +1,25 @@
-<!DOCTYPE html>
-<html lang="it"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Per la mia principessina 🌷</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-</head><body>
+</head>
+<body>
 <section id="hero">
+<div class="card">
 <h1>Buon compleanno,<br>principessina ❤️</h1>
 <p>C'è una piccola cosa che volevo regalarti.</p>
 <button id="gift">🌷 Apri il regalino</button>
+</div>
 </section>
 
-<section id="surprise" class="hidden">
-<img id="tulips" src="assets/tulips.png" alt="Tulipani">
+<section id="bouquet" class="hidden">
+<div class="petals"></div>
+<img src="assets/tulips.png" class="tulips">
 <h2>Se potessi regalarti tutti i tulipani del mondo, lo farei.</h2>
 <p>Per ora ho iniziato da questi. ❤️</p>
 </section>
@@ -23,9 +31,9 @@
 <img src="assets/photo4.jpg">
 </section>
 
-<section class="video">
+<section class="end">
 <h2>❤️ Un ultimo ricordo</h2>
-<video controls playsinline preload="metadata">
+<video controls playsinline>
 <source src="assets/video.mp4" type="video/mp4">
 </video>
 </section>
