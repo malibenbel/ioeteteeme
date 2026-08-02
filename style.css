@@ -1,6 +1,7 @@
-/* -------------------------- */
-/* RESET */
-/* -------------------------- */
+/* =======================================================
+   PER LA MIA PRINCIPESSINA
+   STYLE.CSS - PARTE 1
+======================================================= */
 
 *{
     margin:0;
@@ -9,10 +10,7 @@
 }
 
 html{
-
     scroll-behavior:smooth;
-    scroll-snap-type:y mandatory;
-
 }
 
 body{
@@ -25,15 +23,17 @@ body{
 
     overflow-x:hidden;
 
+    -webkit-font-smoothing:antialiased;
+
 }
 
-/* -------------------------- */
+/* ------------------------- */
 
 section{
 
-    min-height:100vh;
-
     width:100%;
+
+    min-height:100vh;
 
     display:flex;
 
@@ -41,19 +41,23 @@ section{
 
     align-items:center;
 
-    scroll-snap-align:start;
-
     position:relative;
 
 }
 
-/* -------------------------- */
-/* HERO */
-/* -------------------------- */
+/* =======================================================
+   HERO
+======================================================= */
 
 #hero{
 
-    padding:40px;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:0 40px;
 
     text-align:center;
 
@@ -61,17 +65,21 @@ section{
 
 .hero-content{
 
-    max-width:700px;
+    max-width:720px;
+
+    transform:translateY(8vh);
+
+    animation:heroAppear 1.8s ease;
 
 }
 
-h1{
+.hero-content h1{
 
     font-family:"Cormorant Garamond",serif;
 
-    font-size:clamp(52px,8vw,82px);
-
     font-weight:400;
+
+    font-size:clamp(54px,8vw,82px);
 
     line-height:1.05;
 
@@ -83,31 +91,31 @@ h1{
 
 .hero-content p{
 
-    font-size:20px;
+    font-size:19px;
 
     color:#777;
 
-    font-weight:300;
-
     line-height:1.8;
 
-    margin-bottom:50px;
+    font-weight:300;
+
+    margin-bottom:48px;
 
 }
 
-/* -------------------------- */
-/* BUTTON */
-/* -------------------------- */
+/* =======================================================
+   BUTTON
+======================================================= */
 
 button{
 
     background:white;
 
-    border:1px solid #E8E8E8;
+    border:1px solid #ECECEC;
 
     border-radius:999px;
 
-    padding:18px 36px;
+    padding:18px 34px;
 
     font-size:18px;
 
@@ -117,21 +125,25 @@ button{
 
     transition:.35s;
 
+    color:#222;
+
 }
 
 button:hover{
 
-    background:#F8E6EB;
+    background:#F8E7EC;
 
     transform:translateY(-2px);
 
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.08);
 
 }
 
-/* -------------------------- */
-/* BOUQUET */
-/* -------------------------- */
+/* =======================================================
+   BOUQUET
+======================================================= */
 
 .hidden{
 
@@ -141,9 +153,21 @@ button:hover{
 
 #bouquet{
 
+    min-height:auto;
+
+    padding:
+
+    80px
+    30px
+    140px;
+
+    display:flex;
+
     flex-direction:column;
 
-    padding:60px 30px;
+    justify-content:flex-start;
+
+    align-items:center;
 
 }
 
@@ -151,7 +175,7 @@ button:hover{
 
     width:min(520px,86vw);
 
-    animation:flower 1.6s ease;
+    animation:flowerAppear 1.5s ease;
 
 }
 
@@ -161,7 +185,7 @@ button:hover{
 
     text-align:center;
 
-    margin-top:40px;
+    margin-top:45px;
 
 }
 
@@ -179,21 +203,25 @@ button:hover{
 
 .bouquet-text p{
 
-    margin-top:22px;
+    margin-top:24px;
 
     color:#777;
 
-    font-size:19px;
+    font-size:20px;
+
+    line-height:1.7;
 
 }
 
-/* -------------------------- */
-/* PHOTOS */
-/* -------------------------- */
+/* =======================================================
+   FOTO
+======================================================= */
 
 .photo{
 
     background:#FFFDFB;
+
+    padding:70px 25px;
 
 }
 
@@ -201,91 +229,107 @@ button:hover{
 
     width:min(92vw,650px);
 
-    border-radius:34px;
+    border-radius:30px;
+
+    display:block;
+
+    margin:auto;
 
     box-shadow:
+        0 30px 80px rgba(0,0,0,.16);
 
-    0 35px 80px rgba(0,0,0,.18);
-
-    animation:float 8s ease-in-out infinite;
+    transition:
+        transform .7s ease,
+        box-shadow .7s ease;
 
 }
 
-/* -------------------------- */
-/* TRANSITION */
-/* -------------------------- */
+.photo img:hover{
+
+    transform:scale(1.02);
+
+    box-shadow:
+        0 40px 90px rgba(0,0,0,.20);
+
+}
+
+/* =======================================================
+   TRANSITION
+======================================================= */
 
 #transition{
 
-    background:black;
+    background:#090909;
 
     color:white;
 
     text-align:center;
 
-    flex-direction:column;
+    padding:60px 30px;
 
 }
 
 .transition-content{
 
-    max-width:650px;
+    max-width:720px;
+
+}
+
+.line1,
+.line2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:46px;
+
+    font-weight:400;
+
+    line-height:1.25;
 
 }
 
 .line1{
 
-    font-size:34px;
-
-    font-family:"Cormorant Garamond",serif;
-
-    margin-bottom:30px;
+    margin-bottom:26px;
 
 }
 
 .line2{
 
-    font-size:34px;
-
-    font-family:"Cormorant Garamond",serif;
-
-    opacity:.9;
-
-    margin-bottom:60px;
+    margin-bottom:70px;
 
 }
 
-#transition button{
-
-    background:white;
-
-}
-
-/* -------------------------- */
-/* VIDEO */
-/* -------------------------- */
+/* =======================================================
+   VIDEO
+======================================================= */
 
 #videoSection{
 
-    background:black;
+    background:#090909;
+
+    padding:80px 25px;
 
 }
 
-video{
+#memoryVideo{
 
-    width:min(95vw,420px);
+    width:min(94vw,420px);
 
-    border-radius:30px;
+    border-radius:24px;
+
+    display:block;
+
+    margin:auto;
 
     box-shadow:
-
-    0 30px 80px rgba(0,0,0,.45);
+        0 25px 70px rgba(0,0,0,.45);
 
 }
 
-/* -------------------------- */
-/* ENDING */
-/* -------------------------- */
+/* =======================================================
+   ENDING
+======================================================= */
 
 #ending{
 
@@ -293,11 +337,13 @@ video{
 
     text-align:center;
 
+    padding:40px;
+
 }
 
 .ending-content{
 
-    max-width:650px;
+    max-width:700px;
 
 }
 
@@ -305,128 +351,153 @@ video{
 
     font-family:"Cormorant Garamond",serif;
 
-    font-size:60px;
+    font-size:clamp(44px,7vw,70px);
 
     font-weight:400;
 
-    margin-bottom:40px;
-
     line-height:1.15;
+
+    margin-bottom:42px;
 
 }
 
 .ending-content p{
 
-    font-size:24px;
-
-    color:#666;
+    font-size:23px;
 
     font-weight:300;
 
-    letter-spacing:.5px;
+    color:#666;
+
+    opacity:0;
 
 }
 
-/* -------------------------- */
-/* ANIMATIONS */
-/* -------------------------- */
+/* =======================================================
+   ANIMAZIONI
+======================================================= */
 
-@keyframes flower{
+@keyframes heroAppear{
 
-from{
+    from{
 
-opacity:0;
+        opacity:0;
 
-transform:
+        transform:
+            translateY(14vh);
 
-translateY(80px)
+    }
 
-scale(.7);
+    to{
 
-}
+        opacity:1;
 
-to{
+        transform:
+            translateY(8vh);
 
-opacity:1;
-
-transform:
-
-translateY(0)
-
-scale(1);
+    }
 
 }
 
-}
+@keyframes flowerAppear{
 
-@keyframes float{
+    from{
 
-0%{
+        opacity:0;
 
-transform:
+        transform:
+            translateY(70px)
+            scale(.82);
 
-scale(1)
+    }
 
-translateY(0);
+    to{
 
-}
+        opacity:1;
 
-50%{
+        transform:
+            translateY(0)
+            scale(1);
 
-transform:
-
-scale(1.03)
-
-translateY(-8px);
-
-}
-
-100%{
-
-transform:
-
-scale(1)
-
-translateY(0);
+    }
 
 }
 
+::selection{
+
+    background:#F7DDE4;
+
+    color:#222;
+
 }
 
-/* -------------------------- */
-/* MOBILE */
-/* -------------------------- */
+/* =======================================================
+   MOBILE
+======================================================= */
 
 @media(max-width:768px){
 
-h1{
+    .hero-content{
 
-font-size:56px;
+        transform:translateY(5vh);
 
-}
+    }
 
-.bouquet-text h2{
+    .hero-content h1{
 
-font-size:38px;
+        font-size:58px;
 
-}
+    }
 
-.line1,.line2{
+    .hero-content p{
 
-font-size:28px;
+        font-size:18px;
 
-}
+    }
 
-.ending-content h2{
+    button{
 
-font-size:46px;
+        font-size:17px;
 
-}
+        padding:17px 30px;
 
-.hero-content p{
+    }
 
-font-size:18px;
+    .bouquet-image{
 
-}
+        width:90vw;
+
+    }
+
+    .bouquet-text h2{
+
+        font-size:38px;
+
+    }
+
+    .bouquet-text p{
+
+        font-size:18px;
+
+    }
+
+    .line1,
+    .line2{
+
+        font-size:34px;
+
+    }
+
+    .ending-content h2{
+
+        font-size:50px;
+
+    }
+
+    .ending-content p{
+
+        font-size:21px;
+
+    }
 
 }
