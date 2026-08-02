@@ -1,8 +1,8 @@
 
-document.getElementById('gift').onclick=()=>{
+const b=document.getElementById('gift');
+b.onclick=()=>{
  document.getElementById('hero').style.display='none';
- document.getElementById('surprise').classList.remove('hidden');
- if(navigator.vibrate){navigator.vibrate(40);}
- window.scrollTo({top:0,behavior:'smooth'});
+ document.getElementById('bouquet').classList.remove('hidden');
+ if(navigator.vibrate) navigator.vibrate(30);
+ setTimeout(()=>window.scrollTo({top:0,behavior:'smooth'}),100);
 };
-
