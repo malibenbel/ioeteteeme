@@ -1,1 +1,10 @@
 
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;background:#fffdf9;color:#2e2a28;text-align:center}
+section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px}
+button{padding:16px 28px;border-radius:999px;border:none;background:#f6d6df;font-size:20px}
+.hidden{display:none}
+#tulips{max-width:85vw;max-height:60vh;animation:fade .9s}
+.gallery img{width:90vw;max-width:500px;border-radius:24px;margin:30px 0;box-shadow:0 15px 40px rgba(0,0,0,.15)}
+video{width:90vw;max-width:500px;border-radius:24px}
+@keyframes fade{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+
