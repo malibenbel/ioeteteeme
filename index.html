@@ -1,41 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
+
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Per la mia principessina 🌷</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+
+<!-- HERO -->
+
 <section id="hero">
-<div class="card">
-<h1>Buon compleanno,<br>principessina ❤️</h1>
-<p>C'è una piccola cosa che volevo regalarti.</p>
-<button id="gift">🌷 Apri il regalino</button>
-</div>
+
+    <div class="hero-content">
+
+        <h1>
+            Buon compleanno,<br>
+            principessina.
+        </h1>
+
+        <p>
+            C'è una piccola cosa che volevo regalarti.
+        </p>
+
+        <button id="giftButton">
+            🌷 Apri il regalino
+        </button>
+
+    </div>
+
 </section>
+
+<!-- BOUQUET -->
 
 <section id="bouquet" class="hidden">
-<div class="petals"></div>
-<img src="assets/tulips.png" class="tulips">
-<h2>Se potessi regalarti tutti i tulipani del mondo, lo farei.</h2>
-<p>Per ora ho iniziato da questi. ❤️</p>
+
+    <img
+        class="bouquet-image"
+        src="assets/tulips.png"
+        alt="Tulipani">
+
+    <div class="bouquet-text">
+
+        <h2>
+
+            Se potessi regalarti
+            tutti i tulipani del mondo,
+            lo farei.
+
+        </h2>
+
+        <p>
+
+            Per ora ho iniziato da questi. ❤️
+
+        </p>
+
+    </div>
+
 </section>
 
-<section class="gallery">
+<!-- FOTO -->
+
+<section class="photo">
+
 <img src="assets/photo1.jpg">
-<img src="assets/photo2.jpg">
-<img src="assets/photo3.jpg">
-<img src="assets/photo4.jpg">
+
 </section>
 
-<section class="end">
-<h2>❤️ Un ultimo ricordo</h2>
-<video controls playsinline>
-<source src="assets/memory-2.mp4" type="video/mp4">
-</video>
+<section class="photo">
+
+<img src="assets/photo2.jpg">
+
 </section>
+
+<section class="photo">
+
+<img src="assets/photo3.jpg">
+
+</section>
+
+<section class="photo">
+
+<img src="assets/photo4.jpg">
+
+</section>
+
+<!-- TRANSITION -->
+
+<section id="transition">
+
+<div class="transition-content">
+
+<p class="line1">
+
+In mezzo a tutta quella gente...
+
+</p>
+
+<p class="line2">
+
+...io vedevo solo te.
+
+</p>
+
+<button id="videoButton">
+
+❤️ Un ultimo ricordo
+
+</button>
+
+</div>
+
+</section>
+
+<!-- VIDEO -->
+
+<section id="videoSection">
+
+<video
+id="memoryVideo"
+controls
+playsinline
+preload="metadata">
+
+<source
+src="assets/memory-2.mp4"
+type="video/mp4">
+
+</video>
+
+</section>
+
+<!-- FINALE -->
+
+<section id="ending">
+
+<div class="ending-content">
+
+<h2>
+
+Buon compleanno,<br>
+cuore mio.
+
+</h2>
+
+<p>
+
+Ti amo infinito +4 🧩
+
+</p>
+
+</div>
+
+</section>
+
 <script src="script.js"></script>
-</body></html>
+
+</body>
+
+</html>
